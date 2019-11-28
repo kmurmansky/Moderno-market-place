@@ -420,3 +420,39 @@ button{
   }
 }
 // END AUTHOR
+// TUTORIAL
+
+.tutorial{
+  padding: 70px 0 120px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    max-width: 370px;
+    width: 100%;
+    &-images{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      min-height: 270px;
+    }
+    &-name{
+      font-size: 24px;
+      @include f700;
+
+      color: $bg;
+      background-color: #f8f8f8;
+      text-align: center;
+      
+      padding: 30px 10px;
+    }
+  }
+}
+// END TUTORIAL
+// FOOTER
+
+
+
+// END FOOTER
