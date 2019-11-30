@@ -770,7 +770,6 @@ button{
 .irs-max{
   display: none;
 }
-
 .irs--round{
   max-width: 185px;
 }
@@ -778,24 +777,20 @@ button{
   width: 16px;
   height: 16px;
   top: 29px;
-
   border: 4px solid $green;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 0 1px 3px rgba(0,0,255,.3);
 }
-
 .irs--round .irs-bar {
   top: 35px;
   height: 5px;
   background-color: #37474f;
 }
-
 .irs-line {
   background-color: #f2f5f8;
   border-radius: 4px;
 }
-
 .irs--round .irs-from, .irs--round .irs-single, .irs--round .irs-to {
   font-size: 15px;
   line-height: 1.333;
@@ -805,11 +800,9 @@ button{
   border-radius: 0;
   padding: 0;
 }
-
 .irs--round .irs-from:before, .irs--round .irs-single:before, .irs--round .irs-to:before {
   display: none;
 }
-
 .irs-from, .irs-single, .irs-to {
   top: 53px;
 }
