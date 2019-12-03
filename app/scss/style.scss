@@ -644,6 +644,10 @@ button{
     line-height: 1.6;
   }
 }
+
+.advantages__item-images svg{
+  width: 55px;
+}
 // END ADVANTAGES
 // AUTHOR
 
@@ -1239,3 +1243,6 @@ button.icon-unsorted{
   }
 }
 // END products page content
+
+// Media
+@import 'media';
