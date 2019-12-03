@@ -20,9 +20,8 @@
     color: $red;
   }
 }
-
+//  BTN header
 .header__btn{
-  display: inline-block;
   width: 100px;
 
   font-size: 12px;
@@ -39,10 +38,23 @@
   background-color: $green;
 }
 
-.header__btn-register{
+.header__btn-register,
+.header__btn-logout{
   background-color: $red;
   margin-left: 7px;
 }
+
+.header__btn-login--off{
+  display: none;
+}
+
+.header__btn-logout{
+  display: none;
+  &.header__btn-login--on{
+    display: block;
+  }
+}
+// /BTN header
 
 .header__menu{
   background-color: $bg;
@@ -72,12 +84,265 @@
   }
 }
 
+.header__box{
+  display: flex;
+  align-items: center;
+}
+
+.header__circle{
+  &.active{
+    display: block;
+  }
+  display: none;
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  &::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #a0a0a0;
+    font-size: 14px;
+  }
+  span{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 18px;
+    right: -7px;
+    top: -7px;
+    font-size: 11px;
+    @include f600;
+  }
+}
+
+.notification{
+  span{
+    background-color: $yellow;
+  }
+}
+
+.message{
+  span{
+    background-color: $tomato;
+  }
+}
+
+.basket{
+  span{
+    background-color: $green;
+  }
+}
+
+.user{
+  position: relative;
+  height: 90px;
+  margin-top: 40px;
+  &:hover{
+    .user__menu{
+      height: auto;
+      border-width: 1px;
+      padding: 20px;
+      overflow: auto;
+      a{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+.user__menu{
+  border: 0px solid rgb(204, 204, 204);
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: #fff;
+  width: 158px;
+  padding: 0 20px;
+  transition: .2s linear;
+  height: 0;
+  overflow: hidden;
+  a{
+    font-size: 12px;
+    color: #546e7a;  
+    margin-bottom: 0;
+  }
+}
+
+.circle__menu{
+  position: absolute;
+  top: 63px;
+  right: -11px;
+  background-color: #fff;
+  height: 0;
+  overflow: hidden;
+}
+
+.busket__box,
+.message__box,
+.notification__box{
+  margin-top: 53px;
+  height: 90px;
+  position: relative;
+  margin-left: 20px;
+  &:hover{
+    .header__circle::before{
+      color: $bg;
+    }
+    .circle__menu{
+      overflow: hidden;
+      height: auto;
+    }
+    .circle__item{
+    padding: 23px;
+    border-width: 1px;
+    }
+  }
+}
+
+.user__box{
+  margin-left: 20px;
+  margin-right: 25px;
+  padding-right: 20px;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: "\f107";
+    font-family: 'icomoon';
+    font-size: 16px;
+    color: #707070;
+    top: 4px;
+    right: 0;
+  }
+  &-inner{
+    display: flex;
+    align-items: center;
+  }
+  &-images{
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  &-info{
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  &-name{
+    @include f500;
+    color: #222222;
+  }
+  &-money{
+    color: $green;
+    @include f700;
+  }
+}
+
+.circle__item{
+  width: 269px;
+  padding: 0 23px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #e0e0e0;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  transition: .2s linear;
+  &::before{
+    position: absolute;
+    top: 35px;
+    right: 20px;
+    color: #b0bec5;
+    font-size: 16px;
+  }
+}
+
+.circle__images{
+  margin-right: 15px;
+}
+
+.circle__info-name {
+  @include f500;
+  color: $bg;
+}
+.circle__info-theme {
+  font-size: 12px;
+  color: $green;
+}
+.circle__info-price {
+  @include f500;
+  color: #000;
+  font-size: 16px;
+}
+
+.circle__info-date{
+  font-size: 10px;
+  color: #707070;
+}
+
+.busket__sum {
+  padding: 16px 17px 12px;
+  border: 1px solid #e0e0e0;
+  border-top: none;
+  background-color: #fff;
+}
+
+.busket__title{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 13px;
+  padding-right: 22px;
+  font-size: 16px;
+  @include f700;
+  margin-bottom: 15px;
+  color: $bg;
+}
+
+.busket__btn{
+  font-size: 13px;
+  color: #fff;
+  @include f700;
+  padding: 12px 5px;
+  background-color: $green;
+  text-align: center;
+  width: 100px;
+}
+
+.busket__btn-chekout{
+  width: 120px;
+  margin-left: 6px;
+  background-color: $tomato;
+}
+
+.notification__menu,
+.message__menu{
+  .circle__images{
+    margin-right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+  }
+  .circle__info{
+    line-height: 1.4;
+  }
+}
+
+.icon-color::before{
+  color: $tomato;
+}
+
+
 // END HEADER
 // SEARCH
 
 .search{
   min-height: 532px;
-
   background-color: $bgi;
   background-repeat: no-repeat;
   background-size: cover;
@@ -546,18 +811,7 @@ button{
 .footer__col-list{
   li{
     margin-bottom: 15px;
-    padding-left: 22px;
     position: relative;
-    &::before{
-      content: "\f105";
-      font-family: 'icomoon';
-      color: $green;
-      font-size: 18px;
-
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
   }
   a{
     color: #b7c3c8;
@@ -573,7 +827,6 @@ button{
     }
   }
   a{
-  display: inline-block;
   width: 28px;
   height: 28px;
   background-image: url(../images/social/css_sprites.png);

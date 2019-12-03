@@ -17,7 +17,6 @@ html{
 }
 
 a:focus, a:active{outline: none;}
-
 nav,footer,header,aside{display: block;}
 
 html,body{
@@ -48,6 +47,7 @@ body{
   font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;
   font-size: 15px;
+  line-height: 1.6;
   color: $text;
 }
 
@@ -70,6 +70,7 @@ body{
 // /Прижать футер
 
 a{
+  display: inline-block; 
   color: $text;
   }
 
@@ -142,3 +143,16 @@ a{
   }
 }
 // /Хлебные крошки
+
+.angle-right{
+  position: relative;
+  padding-left: 15px;
+  &::before{
+    content: "\f105";
+    position: absolute;
+    font-size: 15px;
+    font-family: 'icomoon';
+    left: 0;
+    color: $green;
+  }
+}
