@@ -5,6 +5,7 @@ $(function(){
     starWidth: "12px",
     readOnly: true,
   });
+  //
 
   $('.product-slider__inner').slick({            // Слайдер с точками, без стрелок - slick
     slidesToShow: 4, 
@@ -13,6 +14,7 @@ $(function(){
     arrows: false,
     dotsClass: 'slider__dots',
   });
+  //
 
   $(".js-range-slider").ionRangeSlider({        // Слайдер, диапазон цен - ionRangeSlider, с кастомным скином
     type: "double",
@@ -23,6 +25,7 @@ $(function(){
     to: 600,
     prefix: "$",
 });
+//
 
                                   
 $('.icon-th-list').on('click', function(){      // 1. Порядок расположения айтемов, сетка или список, при нажатии на кнопку смены вида
@@ -51,6 +54,16 @@ $('.menu__btn').on('click', function(){
 $('.header__btn-menu').on('click', function(){
   $('.header__box').toggleClass('active');
 });
+//
+
+$('.product-one__tabs .tab').on('click', function(event) {
+  var id = $(this).attr('data-id');
+    $('.product-one__tabs').find('.tab-item').removeClass('active-tab').hide();
+    $('.product-one__tabs .tabs').find('.tab').removeClass('active');
+    $(this).addClass('active');
+    $('#'+id).addClass('active-tab').fadeIn();
+    return false;
+  });
 
 
 var mixer = mixitup('.products__inner-box');  // Фильтрация, mixitup
