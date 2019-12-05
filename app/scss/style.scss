@@ -1711,8 +1711,78 @@ button.icon-unsorted{
     @include f500;
   }
 }
-
 // END PRODUCT-ONE ASIDE
+// 404
+
+.page-404__wrapper {
+  border: 1px solid #dcdcdc;
+  background-color: #fff;
+  margin-bottom: 150px;
+}
+
+.page-404__head {
+  font-size: 24px;
+  color: #444;
+  @include f500;
+  padding: 23px 27px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.page-404__inner {
+  text-align: center;
+  background-color: $green;
+  color: #fff;
+}
+
+.page-404__error {
+  @include f800;
+  font-size: 300px;
+  line-height: 1;
+  padding-top: 70px;
+  padding-bottom: 20px;
+  position: relative;
+  &::after{
+    position: absolute;
+    content: '';
+    background-image: url(../images/404.png);
+    width: 150px;
+    height: 292px;
+    margin-left: 20px;
+  }
+  &::before{
+    position: absolute;
+    content: '';
+    background-image: url(../images/404-layer.png);
+    width: 157px;
+    height: 20px;
+    right: 110px;
+    bottom: 20px;
+  }
+}
+
+.page-404__title {
+  font-size: 30px;
+  @include f300;
+  margin-bottom: 35px;
+}
+.page-404__text {
+  font-size: 18px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.page-404__link {
+  font-size: 14px;
+  @include f500;
+  text-transform: uppercase;
+  padding: 20px 30px 16px;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  margin-bottom: 100px;
+  color: #fff;
+}
+// END 404
 
 // Media
 @import 'media';
