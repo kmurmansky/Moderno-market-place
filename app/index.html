@@ -8,7 +8,8 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700&display=swap&subset=cyrillic-ext"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700&display=swap&subset=cyrillic-ext"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -216,7 +217,8 @@
                     </ul>
                   </div>
                 </div>
-                <a class="header__btn header__btn-login header__btn--on" href="#">login</a>
+                <a class="header__btn header__btn-login header__btn--on" data-fancybox data-src="#modal"
+                  href="javascript:;" class="btn btn-primary">login</a>
                 <a class="header__btn header__btn-logout header__btn--off" href="#">logout</a>
                 <a class="header__btn header__btn-register header__btn--on" href="#">Register</a>
               </div>
@@ -1270,7 +1272,36 @@
         </div>
       </div>
     </footer>
+
   </div>
+  <!-- /.wrapper -->
+
+
+  <div id="modal">
+    <div class="login__wrapper">
+      <div class="login">
+        <div class="login__title">
+          Login
+        </div>
+        <form>
+          <label class="login__label-name">
+            <input type="text" placeholder="Имя" required>
+          </label>
+
+          <label class="login__label-pass">
+            <input type="text" placeholder="Пароль" required>
+          </label>
+          <button type="submit">Войти</button>
+          <a class="create__acc" href="#">Новый аккаунт</a>
+          <a class="lost-pass" href="#">Забыли пароль?</a>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
