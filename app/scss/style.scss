@@ -150,6 +150,7 @@
       border-width: 1px;
       padding: 20px;
       overflow: auto;
+      z-index: 1;
       a{
         margin-bottom: 20px;
       }
@@ -1925,11 +1926,12 @@ button.icon-unsorted{
     margin-right: 30px;
     text-align: left;
     display: block;
+    border-bottom: none;
     span{
       display: block;
       background-color: #fff;
-      border-bottom: #dedede;
       padding: 17px 17px 17px 50px;
+      border-bottom: 1px solid #dedede;
       color: #707070;
       font-size: 14px;
       @include f500;
@@ -1951,6 +1953,7 @@ button.icon-unsorted{
 
 .tabs .tab + .tab{
     border-left: none;
+    
 }
 
 .tab_content{
