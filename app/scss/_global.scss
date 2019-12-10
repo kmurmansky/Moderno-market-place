@@ -29,6 +29,10 @@ html,body{
   -webkit-text-size-adjust: 100%;
 }
 input,button,textarea{font-family: inherit;}
+input[type=file], /* FF, IE7+, chrome (except button) */
+input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
+    cursor: pointer; 
+}
 
 input::-ms-clear{display: none;}
 input:focus{outline: none;}
@@ -62,7 +66,7 @@ body{
 .wrapper {
 	display: flex;
 	flex-direction: column;
-  min-height: 100%;
+  height: 100%;
 }
 .content {
   flex: 1 0 auto;
