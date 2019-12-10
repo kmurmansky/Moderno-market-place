@@ -2211,6 +2211,139 @@ button.icon-unsorted{
   }
 }
 //  END PROFILE
+// UPLOAD
+
+.upload__inner {
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  margin-bottom: 110px;
+  button{
+    color: #fff;
+    background-color: $green;
+    padding: 15px 36px;
+    margin-left: 175px;
+  }
+}
+
+.upload__inner-title {
+  font-size: 24px;
+  @include f500;
+  padding: 16px 35px 18px;
+  color: $bg;
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 40px;
+}
+
+.upload__inner-content {
+  margin-bottom: 30px;
+  padding-left: 45px;
+  padding-right: 50px;
+}
+
+.upload-line {
+  margin-bottom: 25px;
+  display: flex;
+  label{
+    min-width: 175px;
+    padding-right: 15px;
+    color: #444;
+    padding-top: 5px;
+    span{
+      color: $green;
+    }
+    &::placeholder{
+      color: #707070;
+    }
+  }
+  select,
+  input,
+  textarea{
+    width: 100%;
+    display: block;
+    border: 1px solid #d7d7d7;
+    height: 40px;
+    background-color: #f9f9f9;
+    padding: 0 18px;
+  }
+  textarea{
+    resize: none;
+    height: 150px;
+    padding: 8px 18px;
+  }
+  .jq-selectbox{
+    width: 100%;
+  }
+  .jq-selectbox__select {
+    height: 40px;
+    padding: 0 18px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    border-radius: 0px;
+    background: #f9f9f9;
+    box-shadow: none;
+    font-family: 'Roboto-Regular', sans-serif;
+    line-height: 40px;
+    color: #707070;
+    text-shadow: none;
+  }
+  .jq-selectbox__trigger-arrow{
+    border: none;
+    top: 0;
+    right: 20px;
+    line-height: 40px;
+    font-size: 15px;
+    &::before{
+      font-family: 'icomoon';
+      content: "\f0d7";
+    }
+  }
+  .jq-selectbox__trigger{
+    border-left: none;
+  }
+  .jq-file{
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    height: 40px;
+    border: 1px solid #d7d7d7;
+    border-bottom-color: #d7d7d7;
+    padding: 0 18px;
+    &.focused{
+      display: none;
+    }
+  }
+  .jq-file__name {
+    width: 100%;
+    height: 40px;
+    padding: 0;
+    margin-left: 122px;
+    border: none;
+    border-bottom-color: transparent;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    line-height: 40px;
+    font-size: 12px;
+    color: #707070;
+  }
+  .jq-file__browse {
+    top: 5px;
+    right: auto;
+    left: 9px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 26px;
+    color: #444;
+    border: 1px solid #d7d7d7;
+    border-left: 1px solid #d7d7d7;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: none;
+    text-shadow: none;
+  }
+}
+
+// END UPLOAD
 
 // Media
 @import 'media';

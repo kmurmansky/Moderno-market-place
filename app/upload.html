@@ -327,7 +327,7 @@
           <div class="breadcrumbs__inner">
             <ul class="breadcrumbs__list">
               <li><a href="#">Главная</a></li>
-              <li><span>Настройки профиля</span></li>
+              <li><span>Загрузка товара</span></li>
             </ul>
           </div>
           <!-- /.breadcrumbs__inner -->
@@ -336,304 +336,89 @@
       </div>
       <!-- /.breadcrumbs -->
 
-      <div class="settings">
+      <section class="upload">
         <div class="container">
-          <div class="product-one__tabs settings__tabs">
-            <div class="tabs">
-              <span class="tab angle-right active" data-id="1">Информация</span>
-              <span class="tab angle-right" data-id="2">Профиль</span>
-              <span class="tab angle-right" data-id="3">Бэйджы</span>
-              <span class="tab angle-right" data-id="4">E-mail</span>
-              <span class="tab angle-right" data-id="5">Социльная сеть</span>
-            </div>
-            <div class="tab_content">
-              <div class="tab-item active-tab" id="1">
-                <div class="page__box">
-                  <div class="page__box-title">
-                    Информация
-                  </div>
-                  <div class="page__box-content">
-                    <form>
-                      <div class="settings__line">
-                        <label>
-                          Фамилия
-                        </label>
-                        <input type="text">
-                      </div>
+          <div class="upload__inner">
 
-                      <div class="settings__line">
-                        <label>
-                          Имя
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Компания
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Страна
-                        </label>
-                        <select name="" id="">
-                          <option value="">Страна</option>
-                          <option value="">Страна</option>
-                        </select>
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 1
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 2
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Город
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Штат, область, регион
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Zip/postal cod
-                        </label>
-                        <input type="text">
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.page__box-content -->
-                </div>
-                <!-- /.page__box -->
+            <form>
+              <div class="upload__inner-title">
+                Загрузите ваш товар
               </div>
-              <!-- tab__item -->
-
-              <div class="tab-item" id="2">
-                <div class="page__box">
-                  <div class="page__box-title">
-                    Информация
-                  </div>
-                  <div class="page__box-content">
-                    <form>
-                      <div class="settings__line">
-                        <label>
-                          Фамилия
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Имя
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Компания
-                        </label>
-                        <input type="text">
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.page__box-content -->
+              <div class="upload__inner-content">
+                <div class="upload-line">
+                  <label>Выберите категорию <span>*</span></label>
+                  <select>
+                    <option value="">Select</option>
+                    <option value="">Select</option>
+                    <option value="">Select</option>
+                    <option value="">Select</option>
+                  </select>
                 </div>
-                <!-- /.page__box -->
+
+                <div class="upload-line">
+                  <label>Имя товара <span>*</span></label>
+                  <input type="text" placeholder="Напишите имя товара..." required>
+                </div>
+
+                <div class="upload-line">
+                  <label>Описание <span>*</span></label>
+                  <textarea placeholder="<h1>Напишите описание товара...</h1>" required></textarea>
+                </div>
+
+                <div class="upload-line">
+                  <label>Товар <span>*</span></label>
+                  <input type="file" required data-placeholder="Выбрать файл" data-browse="Файл не выбран">
+                </div>
+
+                <div class="upload-line">
+                  <label>Скриншоты <span>*</span></label>
+                  <input type="file" required data-placeholder="Выбрать файл" data-browse="Файл не выбран">
+                </div>
+
+                <div class="upload-line">
+                  <label>Тип товара <span>*</span></label>
+                  <select>
+                    <option value="">PSD</option>
+                    <option value="">WordPress</option>
+                    <option value="">Joomla</option>
+                    <option value="">API</option>
+                  </select>
+                </div>
+
+                <div class="upload-line">
+                  <label>Размеры <span>*</span></label>
+                  <input type="text" placeholder="Укажите размер товара..." required>
+                </div>
+
+                <div class="upload-line">
+                  <label>Тэги <span>*</span></label>
+                  <input type="text" placeholder="Напишите тэги товара..." required>
+                </div>
               </div>
 
-              <div class="tab-item" id="3">
-                <div class="page__box">
-                  <div class="page__box-title">
-                    Информация
-                  </div>
-                  <div class="page__box-content">
-                    <form>
-                      <div class="settings__line">
-                        <label>
-                          Фамилия
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Имя
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Компания
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Город
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Штат, область, регион
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Zip/postal cod
-                        </label>
-                        <input type="text">
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.page__box-content -->
-                </div>
-                <!-- /.page__box -->
+              <div class="upload__inner-title">
+                Установите цену в (US$):
               </div>
-
-              <div class="tab-item" id="4">
-                <div class="page__box">
-                  <div class="page__box-title">
-                    Информация
-                  </div>
-                  <div class="page__box-content">
-                    <form>
-                      <div class="settings__line">
-                        <label>
-                          Фамилия
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Имя
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Компания
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Страна
-                        </label>
-                        <select name="" id="">
-                          <option value="">Страна</option>
-                          <option value="">Страна</option>
-                        </select>
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 1
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 2
-                        </label>
-                        <input type="text">
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.page__box-content -->
+              <div class="upload__inner-content">
+                <div class="upload-line">
+                  <label>Регулярная</label>
+                  <input type="text" placeholder="$00.00" required>
                 </div>
-                <!-- /.page__box -->
-              </div>
 
-              <div class="tab-item" id="5">
-                <div class="page__box">
-                  <div class="page__box-title">
-                    Информация
-                  </div>
-                  <div class="page__box-content">
-                    <form>
-                      <div class="settings__line">
-                        <label>
-                          Страна
-                        </label>
-                        <select name="" id="">
-                          <option value="">Страна</option>
-                          <option value="">Страна</option>
-                        </select>
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 1
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Адрес 2
-                        </label>
-                        <input type="text">
-                      </div>
-
-                      <div class="settings__line">
-                        <label>
-                          Город
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Штат, область, регион
-                        </label>
-                        <input type="text">
-                      </div>
-                      <div class="settings__line">
-                        <label>
-                          Zip/postal cod
-                        </label>
-                        <input type="text">
-                      </div>
-                    </form>
-                  </div>
-                  <!-- /.page__box-content -->
+                <div class="upload-line">
+                  <label>Вип</label>
+                  <input type="text" placeholder="$00.00" required>
                 </div>
-                <!-- /.page__box -->
+                <button type="submit">Отправить</button>
               </div>
+            </form>
 
-            </div>
-            <!-- /.tab_content -->
           </div>
-          <!-- /.settings__tabs -->
+          <!-- /.upload__inner -->
         </div>
         <!-- /.container -->
-      </div>
-      <!-- ./settings -->
+      </section>
+      <!-- /.upload -->
 
 
     </div>
