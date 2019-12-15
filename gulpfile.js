@@ -1,11 +1,14 @@
-let gulp = require('gulp'),
+var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     browserSync = require ('browser-sync'),
     autoprefixer = require ('gulp-autoprefixer'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    cssmin = require('gulp-cssmin');
+    cssmin = require('gulp-cssmin'),
+    imagemin = require('gulp-imagemin'),
+    imgCompress  = require('imagemin-jpeg-recompress');
+
 
 
 gulp.task('sass', function(){
@@ -51,15 +54,36 @@ gulp.task('script', function(){
       .pipe(gulp.dest('app/js'))
 });
 
+
 gulp.task('html', function(){
   return gulp.src('app/*.html')
     .pipe(browserSync.reload({stream:true}))
 });
 
+
 gulp.task('js', function(){
   return gulp.src('app/js/*.js')
     .pipe(browserSync.reload({stream:true}))
 });
+
+
+// Optimize images
+gulp.task('img', function() {
+  return gulp.src('app/images/**/*')
+  .pipe(imagemin([
+    imgCompress({
+      loops: 4,
+      min: 70,
+      max: 80,
+      quality: 'high'
+    }),
+    imagemin.gifsicle(),
+    imagemin.optipng(),
+    imagemin.svgo()
+  ]))
+  .pipe(gulp.dest('app/images/'));
+});
+
 
 gulp.task('browser-sync', function() {
   browserSync.init({

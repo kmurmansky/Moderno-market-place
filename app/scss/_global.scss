@@ -16,7 +16,7 @@ html{
   border: 0;
 }
 
-a:focus, a:active{outline: none;}
+a:active{outline: none;}
 nav,footer,header,aside{display: block;}
 
 html,body{
@@ -35,7 +35,6 @@ input[type=file]::-webkit-file-upload-button { /* chromes and blink button */
 }
 
 input::-ms-clear{display: none;}
-input:focus{outline: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
 button:focus{outline: none;}
@@ -56,13 +55,13 @@ body{
   background-color: #f4f6f5;
 }
 
-// Прижать футер
 html,
 body{
   height: 100%;
   position: relative;
   overflow-x: hidden;
 }
+// Прижать футер
 .wrapper {
 	display: flex;
 	flex-direction: column;
@@ -99,6 +98,7 @@ a{
   }
 }
 
+
 .header{
   background-color: #fff;
 }
@@ -124,6 +124,8 @@ a{
 .breadcrumbs{
   &__inner{
     padding: 45px 0 40px;
+    overflow: hidden;
+    max-width: 1200px;
   }
   &__list{
     li{
@@ -163,4 +165,8 @@ a{
     top: -3px;
     color: $green;
   }
+}
+
+#modal{
+  display: none;
 }
